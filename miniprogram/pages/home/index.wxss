@@ -1,0 +1,13 @@
+.dashboard-stats,
+.dashboard-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.dashboard-stats .stat,
+.dashboard-actions .quick {
+  width: 48%;
+  min-width: 0;
+}

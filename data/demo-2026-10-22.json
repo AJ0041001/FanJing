@@ -1,0 +1,365 @@
+{
+  "version": 1,
+  "revision": 0,
+  "demo": true,
+  "seededAt": "2026-10-22T08:00:00+08:00",
+  "session": null,
+  "gardens": [
+    {
+      "id": "garden-1",
+      "ownerId": "farmer-1",
+      "name": "云雾一号茶园",
+      "location": "铜仁市江口县太平镇",
+      "area": 86,
+      "variety": "龙井43",
+      "altitude": 860,
+      "note": "春夏遮阴管理，人工采收。",
+      "status": "生长良好"
+    },
+    {
+      "id": "garden-2",
+      "ownerId": "farmer-2",
+      "name": "缠溪生态茶园",
+      "location": "铜仁市印江县缠溪镇",
+      "area": 65,
+      "variety": "福鼎大白",
+      "altitude": 720,
+      "note": "坡地茶园，重点管理土壤水分。",
+      "status": "生长良好"
+    },
+    {
+      "id": "garden-3",
+      "ownerId": "farmer-3",
+      "name": "龙塘春山茶园",
+      "location": "铜仁市石阡县龙塘镇",
+      "area": 42,
+      "variety": "中茶108",
+      "altitude": 980,
+      "note": "高海拔示范茶园。",
+      "status": "待巡园"
+    }
+  ],
+  "harvests": [
+    {
+      "id": "history-0-0",
+      "gardenId": "garden-1",
+      "ownerId": "farmer-1",
+      "date": "2026-02-18",
+      "amount": 980,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-0-1",
+      "gardenId": "garden-1",
+      "ownerId": "farmer-1",
+      "date": "2026-03-18",
+      "amount": 1020,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-0-2",
+      "gardenId": "garden-1",
+      "ownerId": "farmer-1",
+      "date": "2026-04-18",
+      "amount": 1085,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-0-3",
+      "gardenId": "garden-1",
+      "ownerId": "farmer-1",
+      "date": "2026-05-18",
+      "amount": 1120,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-0-4",
+      "gardenId": "garden-1",
+      "ownerId": "farmer-1",
+      "date": "2026-06-18",
+      "amount": 1180,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-0-5",
+      "gardenId": "garden-1",
+      "ownerId": "farmer-1",
+      "date": "2026-07-18",
+      "amount": 1230,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-0-6",
+      "gardenId": "garden-1",
+      "ownerId": "farmer-1",
+      "date": "2026-08-18",
+      "amount": 1290,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-0-7",
+      "gardenId": "garden-1",
+      "ownerId": "farmer-1",
+      "date": "2026-09-18",
+      "amount": 1340,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-1-0",
+      "gardenId": "garden-2",
+      "ownerId": "farmer-2",
+      "date": "2026-02-18",
+      "amount": 740,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-1-1",
+      "gardenId": "garden-2",
+      "ownerId": "farmer-2",
+      "date": "2026-03-18",
+      "amount": 780,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-1-2",
+      "gardenId": "garden-2",
+      "ownerId": "farmer-2",
+      "date": "2026-04-18",
+      "amount": 805,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-1-3",
+      "gardenId": "garden-2",
+      "ownerId": "farmer-2",
+      "date": "2026-05-18",
+      "amount": 850,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-1-4",
+      "gardenId": "garden-2",
+      "ownerId": "farmer-2",
+      "date": "2026-06-18",
+      "amount": 880,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-1-5",
+      "gardenId": "garden-2",
+      "ownerId": "farmer-2",
+      "date": "2026-07-18",
+      "amount": 925,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-1-6",
+      "gardenId": "garden-2",
+      "ownerId": "farmer-2",
+      "date": "2026-08-18",
+      "amount": 960,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-1-7",
+      "gardenId": "garden-2",
+      "ownerId": "farmer-2",
+      "date": "2026-09-18",
+      "amount": 1000,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-2-0",
+      "gardenId": "garden-3",
+      "ownerId": "farmer-3",
+      "date": "2026-02-18",
+      "amount": 520,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-2-1",
+      "gardenId": "garden-3",
+      "ownerId": "farmer-3",
+      "date": "2026-03-18",
+      "amount": 540,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-2-2",
+      "gardenId": "garden-3",
+      "ownerId": "farmer-3",
+      "date": "2026-04-18",
+      "amount": 565,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-2-3",
+      "gardenId": "garden-3",
+      "ownerId": "farmer-3",
+      "date": "2026-05-18",
+      "amount": 580,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-2-4",
+      "gardenId": "garden-3",
+      "ownerId": "farmer-3",
+      "date": "2026-06-18",
+      "amount": 610,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-2-5",
+      "gardenId": "garden-3",
+      "ownerId": "farmer-3",
+      "date": "2026-07-18",
+      "amount": 630,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-2-6",
+      "gardenId": "garden-3",
+      "ownerId": "farmer-3",
+      "date": "2026-08-18",
+      "amount": 665,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "history-2-7",
+      "gardenId": "garden-3",
+      "ownerId": "farmer-3",
+      "date": "2026-09-18",
+      "amount": 690,
+      "grade": "一级鲜叶",
+      "note": "模拟月度采收记录",
+      "orderId": "",
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    }
+  ],
+  "farming": [
+    {
+      "id": "farming-1",
+      "gardenId": "garden-1",
+      "ownerId": "farmer-1",
+      "date": "2026-10-21",
+      "type": "巡园",
+      "note": "叶色均匀，未发现明显病虫害。",
+      "photos": [],
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    },
+    {
+      "id": "farming-2",
+      "gardenId": "garden-2",
+      "ownerId": "farmer-2",
+      "date": "2026-10-20",
+      "type": "灌溉",
+      "note": "完成东侧地块补水，记录为人工填报。",
+      "photos": [],
+      "createdAt": "2026-10-22T08:00:00+08:00"
+    }
+  ],
+  "orders": [
+    {
+      "id": "order-1",
+      "title": "秋季优质鲜叶收购",
+      "quantity": 2000,
+      "price": 8.6,
+      "deadline": "2026-10-27",
+      "grade": "一级鲜叶",
+      "note": "一芽二叶，采后及时送达加工中心。",
+      "status": "open",
+      "createdAt": "2026-10-22T08:00:00+08:00",
+      "claims": []
+    },
+    {
+      "id": "order-2",
+      "title": "生态茶园定向采购",
+      "quantity": 1500,
+      "price": 9.2,
+      "deadline": "2026-10-31",
+      "grade": "特级鲜叶",
+      "note": "要求叶片完整，无明显机械损伤。",
+      "status": "open",
+      "createdAt": "2026-10-22T08:00:00+08:00",
+      "claims": [
+        {
+          "id": "claim-seed",
+          "ownerId": "farmer-2",
+          "gardenId": "garden-2",
+          "amount": 500,
+          "delivered": 0,
+          "createdAt": "2026-10-22T08:00:00+08:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "matcha-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "dependencies": { "wx-server-sdk": "~3.0.1" }
+}

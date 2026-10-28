@@ -1,0 +1,8 @@
+{
+  "name": "fanjing-matcha-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "梵净抹茶茶园订单与农情监测演示项目",
+  "scripts": { "start": "node server.js", "test": "node --test tests/core.test.js tests/native.test.js tests/cloud.test.js", "check": "node scripts/check.js", "prepare:cloud": "node scripts/prepare-cloud.js" },
+  "engines": { "node": ">=18" }
+}

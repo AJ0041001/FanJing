@@ -1,0 +1,19 @@
+<view class="page">
+  <view class="row"><view class="eyebrow">FANJING MATCHA / {{user.role === 'factory' ? '加工厂管理端' : '农户工作台'}}</view><view class="logout" bindtap="switchUser">{{mode === 'cloud' ? '账号' : '切换身份'}}</view></view>
+  <view class="title">{{user.role === 'factory' ? '看见茶园，连接产销。' : user.name + '，你好。'}}</view>
+  <view class="muted">{{date}} · {{user.subtitle}}</view>
+  <view wx:if="{{error}}" class="error" bindtap="refresh">{{error}} · 点击重试</view>
+  <view class="hero"><view class="hero-title">本月已上报采收量</view><view class="hero-number">{{summary.monthAmount || 0}}<text class="unit" style="color:#c9d8b9">kg</text></view><view class="muted">{{user.role === 'factory' ? '汇总所有已建档茶园' : '来自你的茶园人工填报'}} · 持续更新</view></view>
+  <view class="grid dashboard-stats">
+    <view class="stat"><view class="muted">{{user.role === 'factory' ? '已建档茶园' : '我的茶园'}}</view><view class="number">{{summary.gardenCount}}<text class="unit">座</text></view><view class="muted">共 {{summary.area}} 亩</view></view>
+    <view class="stat"><view class="muted">待交付鲜叶</view><view class="number">{{summary.pendingDelivery}}<text class="unit">kg</text></view><view class="muted">可接订单 {{summary.openOrders}} 笔</view></view>
+  </view>
+  <view class="section">今日工作</view>
+  <view class="grid dashboard-actions" wx:if="{{user.role === 'farmer'}}"><view class="quick" bindtap="addFarming"><view class="label">＋ 农事打卡</view><view class="muted">记下茶园的每一天</view></view><view class="quick" bindtap="addHarvest"><view class="label">↗ 采收上报</view><view class="muted">更新产量与交付进度</view></view></view>
+  <view class="grid dashboard-actions" wx:else><view class="quick" bindtap="publishOrder"><view class="label">＋ 发布收购</view><view class="muted">把需求送到农户手中</view></view><view class="quick" bindtap="toGardens"><view class="label">⌕ 茶园台账</view><view class="muted">查看种植与农事记录</view></view></view>
+  <view class="card" style="margin-top:22rpx" bindtap="toForecast"><view class="row"><view><view class="card-title">提前看见下一季</view><view class="muted">GM(1,1) 月度产量趋势预测</view></view><view class="chevron">↗</view></view></view>
+  <view class="row section"><text>最近动态</text><text class="link" bindtap="toRecords">全部记录 ›</text></view>
+  <view class="card"><view wx:if="{{!records.length}}" class="empty">还没有记录，开始第一次填报吧</view><view class="record" wx:for="{{records}}" wx:key="id"><view class="row"><text class="badge">{{item.kind}}</text><text class="muted">{{item.gardenName}}</text></view><view style="margin-top:14rpx">{{item.label}}</view><view class="record-date">{{item.date}}</view></view></view>
+  <view class="notice">演示数据 · 农情由人工填报与拍照记录；预测为趋势参考。</view>
+  <button wx:if="{{mode === 'local'}}" class="button ghost" bindtap="reset">恢复初始演示数据</button>
+</view>

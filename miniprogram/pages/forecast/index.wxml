@@ -1,0 +1,10 @@
+<view class="page"><view class="eyebrow">YIELD INTELLIGENCE</view><view class="title">把下一步，看清楚。</view><view class="muted" style="margin:14rpx 0 28rpx">基于已结束月份的采收汇总，预测未来三个月。</view><view wx:if="{{error}}" class="error" bindtap="refresh">{{error}} · 点击重试</view>
+  <picker range="{{gardens}}" range-key="name" value="{{selected}}" bindchange="choose"><view class="input picker">{{gardens[selected].name || '选择茶园'}}<text style="float:right">⌄</text></view></picker>
+  <view wx:if="{{modelError}}" class="notice">{{modelError}}</view>
+  <block wx:if="{{result}}"><view class="hero"><view class="hero-title">{{result.futureMonths[0]}} 预测鲜叶产量</view><view class="hero-number">{{result.forecast[0]}}<text class="unit" style="color:#c9d8b9">kg</text></view><view class="muted">GM(1,1) · {{result.values.length}} 个月历史数据</view></view>
+    <view class="card"><view class="row"><text class="card-title">产量趋势</text><text class="muted small">● 历史　○ 预测 / kg</text></view><canvas canvas-id="forecastCanvas" id="forecastCanvas" class="chart"></canvas><view class="muted small">{{result.months[0]}} — {{result.futureMonths[2]}}</view></view>
+    <view class="card"><view class="card-title">未来三个月</view><view wx:for="{{result.rows}}" wx:key="month" class="table-row"><text>{{item.month}}</text><text>{{item.amount}} kg</text></view><view class="divider"></view><view class="row muted"><text>历史拟合 MAPE</text><text>{{result.mape}}%</text></view><view class="row muted"><text>级比检验</text><text>{{result.ratioPassed ? '通过' : '未通过'}}</text></view><view class="field-help">拟合误差不代表未来预测误差或准确率。</view></view>
+    <view class="card"><view class="card-title">历史月度汇总</view><view wx:for="{{result.history}}" wx:key="month" class="table-row"><text>{{item.month}}</text><text>{{item.amount}} kg</text></view></view>
+    <view class="notice"><view wx:for="{{result.warnings}}" wx:key="*this">{{item}}</view><view>当前月份的零散采收不参与模型拟合。初始历史数据为模拟数据。</view></view>
+  </block>
+</view>

@@ -1,0 +1,8 @@
+<view class="page"><view class="eyebrow">GARDEN ARCHIVE</view><view class="row"><view class="title">{{user.role === 'factory' ? '茶园台账' : '我的茶园'}}</view><view wx:if="{{user.role === 'farmer'}}" class="badge" bindtap="add">＋ 新建档案</view></view><view class="muted" style="margin:14rpx 0 30rpx">一园一档，让每一批鲜叶有迹可循。</view>
+  <view wx:if="{{error}}" class="error" bindtap="refresh">{{error}} · 点击重试</view>
+  <view wx:if="{{!gardens.length}}" class="empty">尚未建档，点击右上方添加茶园</view>
+  <view class="card" wx:for="{{gardens}}" wx:key="id"><view class="row"><view class="card-title">{{item.name}}</view><text class="badge">{{item.status}}</text></view><view class="muted">{{item.location}}</view><view class="metric-row"><view class="grow"><view class="muted">种植面积</view><view class="value">{{item.area}}<text class="unit">亩</text></view></view><view class="grow"><view class="muted">海拔</view><view class="value">{{item.altitude}}<text class="unit">m</text></view></view></view><view class="muted">茶树品种 {{item.variety}} · 负责人 {{item.ownerName}}</view><view class="muted">{{item.note}}</view>
+    <view class="row" style="margin-top:25rpx"><text class="link" data-id="{{item.id}}" bindtap="records">查看农事与采收 ›</text><text wx:if="{{user.role === 'farmer'}}" class="link" data-id="{{item.id}}" bindtap="edit">编辑档案</text></view>
+    <view wx:if="{{user.role === 'farmer'}}" class="row"><button class="button secondary grow" data-id="{{item.id}}" bindtap="farming">农事打卡</button><button class="button grow" data-id="{{item.id}}" bindtap="harvest">采收上报</button></view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<view class="page login">
+  <view class="logo">茶</view>
+  <view class="eyebrow">FANJING MATCHA</view>
+  <view class="title"><view>一片好茶，</view><view>从茶园到订单。</view></view>
+  <view class="muted" style="margin-top:22rpx">梵净抹茶 · 茶园订单与农情监测</view>
+  <view class="notice">{{mode === 'local' ? '本地演示 · 所有初始数据均为模拟数据。选择身份进入，填报结果保存在当前设备。' : '云开发模式 · 身份由云端账号映射决定。初始数据为演示数据。'}}</view>
+  <view class="card" wx:if="{{mode === 'local'}}">
+    <view class="card-title">选择演示身份</view>
+    <view wx:for="{{users}}" wx:key="id" class="identity" data-id="{{item.id}}" bindtap="choose">
+      <view class="avatar">{{item.initials}}</view>
+      <view class="grow"><view>{{item.name}}</view><view class="muted">{{item.role === 'factory' ? '加工厂管理端' : '农户端'}} · {{item.subtitle}}</view></view><view class="chevron">›</view>
+    </view>
+  </view>
+  <button wx:else class="button" bindtap="cloudLogin" loading="{{busy}}" disabled="{{busy}}">使用已配置的微信身份进入</button>
+  <view wx:if="{{error}}" class="error">{{error}}</view>
+  <view class="footer">挑战杯演示项目 · A 方案 v1.0</view>
+</view>

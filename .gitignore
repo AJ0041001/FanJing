@@ -1,0 +1,17 @@
+node_modules/
+project.private.config.json
+exports/
+__pycache__/
+*.log
+
+# Local credentials and generated files
+.env
+.env.*
+!.env.example
+project.private.config.json
+node_modules/
+__pycache__/
+*.py[cod]
+exports/
+coverage/
+*.log

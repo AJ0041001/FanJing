@@ -1,0 +1,10 @@
+<view class="page"><view class="eyebrow">GARDEN WORKSPACE</view><view class="title">{{title}}</view><view class="muted" style="margin:15rpx 0 30rpx">{{subtitle}}</view><view class="card">
+  <view wx:for="{{fields}}" wx:key="key" class="field"><view class="field-label">{{item.label}}</view>
+    <textarea wx:if="{{item.type === 'textarea'}}" class="input textarea" value="{{values[item.key] || ''}}" maxlength="300" data-key="{{item.key}}" bindinput="input" placeholder="填写{{item.label}}"/>
+    <picker wx:elif="{{item.type === 'select'}}" range="{{item.choices}}" range-key="label" value="{{item.index}}" data-key="{{item.key}}" bindchange="pick"><view class="input picker">{{item.display}}<text style="float:right">⌄</text></view></picker>
+    <picker wx:elif="{{item.type === 'date'}}" mode="date" value="{{values[item.key]}}" data-key="{{item.key}}" bindchange="pick"><view class="input picker">{{values[item.key]}}<text style="float:right">⌄</text></view></picker>
+    <input wx:else class="input" type="{{item.type === 'digit' ? 'digit' : 'text'}}" value="{{values[item.key] || ''}}" data-key="{{item.key}}" bindinput="input" maxlength="100" placeholder="填写{{item.label}}"/>
+  </view>
+  <view wx:if="{{kind === 'farming'}}" class="field"><view class="field-label">茶园照片（选填，最多 3 张）</view><view class="photo-grid"><view wx:for="{{photoViews}}" wx:key="*this"><image class="photo" src="{{item}}" mode="aspectFill"/><view class="link small" data-index="{{index}}" bindtap="removePhoto">移除</view></view></view><button wx:if="{{photos.length !== 3}}" class="button secondary" bindtap="addPhoto" disabled="{{busy}}">＋ 拍照或选择照片</button></view>
+  <view wx:if="{{error}}" class="error">{{error}}</view><button class="button" bindtap="submit" disabled="{{busy}}" loading="{{busy}}">{{kind === 'accept' ? '确认接单' : '保存并更新'}}</button>
+</view><view class="notice">演示填报保存在当前运行环境。采收上报中的“交付”为农户登记量。</view></view>

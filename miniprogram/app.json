@@ -1,0 +1,12 @@
+{
+  "pages": ["pages/login/index", "pages/home/index", "pages/gardens/index", "pages/orders/index", "pages/forecast/index", "pages/form/index", "pages/records/index"],
+  "window": { "navigationBarTitleText": "梵净抹茶", "navigationBarBackgroundColor": "#f5f6ef", "navigationBarTextStyle": "black", "backgroundColor": "#f5f6ef", "backgroundTextStyle": "dark" },
+  "tabBar": { "color": "#8a938a", "selectedColor": "#235347", "backgroundColor": "#ffffff", "borderStyle": "white", "list": [
+    {"pagePath":"pages/home/index","text":"总览","iconPath":"assets/home.png","selectedIconPath":"assets/home-active.png"},
+    {"pagePath":"pages/gardens/index","text":"茶园","iconPath":"assets/gardens.png","selectedIconPath":"assets/gardens-active.png"},
+    {"pagePath":"pages/orders/index","text":"订单","iconPath":"assets/orders.png","selectedIconPath":"assets/orders-active.png"},
+    {"pagePath":"pages/forecast/index","text":"预测","iconPath":"assets/forecast.png","selectedIconPath":"assets/forecast-active.png"}
+  ] },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
